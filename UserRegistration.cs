@@ -19,5 +19,15 @@ namespace RegeX
             else
                 Console.WriteLine("Wrong number input");
         }
+        public void pass(string password)                           //password 
+        {
+            String PASSWORD = @"^[A-Za-z0-9]{8}$";
+            Regex rg = new Regex(PASSWORD);
+            var result = rg.IsMatch(password);
+            if (result)
+                Console.WriteLine("Your password is " + password);
+            else
+                Console.WriteLine("Wrong number input");
+        }
     }
 }
