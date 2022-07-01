@@ -9,28 +9,15 @@ namespace RegeX
 {
     internal class UserRegistration
     {
-        public void LastName(String lastname)
+        public void mobile(String number)
         {
-            String lastnameRule = @"^[A-Z]{1}[A-Za-z]{3,15}";
-            Regex rg = new Regex(lastnameRule);
-            var result = rg.IsMatch(lastname);
+            String mobilenum = @"^91([ ])?[6-9]{1}[0-9]{9}$";
+            Regex rg = new Regex(mobilenum);
+            var result=rg.IsMatch(number);
             if (result)
-                Console.WriteLine("Last Name = " + lastname);
+                Console.WriteLine("Your number is " + number);
             else
-                Console.WriteLine("Invalid Input");
-        }
-        public void Email(string email)
-        {
-            string emailRule = @"^[a-z]{1}[A-Za-z0-9]([.+]{1}[A-Za-z0-9])+@[A-Za-z0-9]+.[a-z]{2,4}(.[a-z]{2,4})$";
-            //@"^[0-9a-zA-Z]+[.-_--]{0,2}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
-            //string r = @"^[a-zA-Z0-9]{3,7}([._+-][0-9a-zA-Z]{1,7})*@[0-9a-zA-Z]{1,7}+[.]?([a-zA-Z]{2,4})+[.]?([a-zA-Z]{2,3})*$";
-            //string tld = @".[a-z]{2,4}$";
-            Regex rg = new Regex(emailRule);
-            var Result=rg.IsMatch(email);
-            if (Result)
-                Console.WriteLine("Email = " + email);
-            else
-                Console.WriteLine("Invalid Input");
+                Console.WriteLine("Wrong number input");
         }
     }
-}//([.+]{1}[A-Za-z0-9])
+}
