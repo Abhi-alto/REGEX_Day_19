@@ -8,14 +8,14 @@ using System.Text.RegularExpressions;
 namespace RegeX
 {
     internal class UserRegistration
-    {
-        public void Name(String name)
+    { 
+        public void LastName(String lastname)
         {
-            String nameRule = @"^[A-Z]{1}[A-Za-z]{3,10}";
-            Regex rg = new Regex(nameRule);
-            var result=rg.IsMatch(name);
+            String lastnameRule = @"^[A-Z]{1}[A-Za-z]{3,15}";
+            Regex rg = new Regex(lastnameRule);
+            var result = rg.IsMatch(lastname);
             if (result)
-                Console.WriteLine("First Name = " + name);
+                Console.WriteLine("Last Name = " + lastname);
             else
                 Console.WriteLine("Invalid Input");
         }
