@@ -1,8 +1,8 @@
 ﻿using RegeX;
 Console.WriteLine("Welcome to the Regex class");
-Console.WriteLine("Enter your email address");
-string email=Console.ReadLine();
+Console.WriteLine("Enter your mobile number with space in between country code and number");
+string num=Console.ReadLine();
 UserRegistration details = new UserRegistration();
-details.Email(email); 
+details.mobile(num); 
 
 
