@@ -20,9 +20,9 @@ namespace RegeX
                 Console.WriteLine("Wrong number input");
         }
         public void pass(string password)                           //password - minimum 8 characters
-                                                                    //         -
+                                                                    //         -Atleast one capital letter
         {
-            String PASSWORD = @"^[A-Za-z0-9]{8,}$";
+            String PASSWORD = @"^(?=.*[A-Z])[A-Za-z0-9]{8,}$";      //Positive look - (?=.*[A-Z])  .*-means we dont care about the precision where we are finding the character    
             Regex rg = new Regex(PASSWORD);
             var result = rg.IsMatch(password);
             if (result)
