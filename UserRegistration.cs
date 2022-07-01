@@ -19,9 +19,10 @@ namespace RegeX
             else
                 Console.WriteLine("Wrong number input");
         }
-        public void pass(string password)                           //password 
+        public void pass(string password)                           //password - minimum 8 characters
+                                                                    //         -
         {
-            String PASSWORD = @"^[A-Za-z0-9]{8}$";
+            String PASSWORD = @"^[A-Za-z0-9]{8,}$";
             Regex rg = new Regex(PASSWORD);
             var result = rg.IsMatch(password);
             if (result)
