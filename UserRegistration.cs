@@ -21,8 +21,9 @@ namespace RegeX
         }
         public void pass(string password)                           //password - minimum 8 characters
                                                                     //         -Atleast one capital letter
+                                                                    //          -Atleast one numeric type
         {
-            String PASSWORD = @"^(?=.*[A-Z])[A-Za-z0-9]{8,}$";      //Positive look - (?=.*[A-Z])  .*-means we dont care about the precision where we are finding the character    
+            String PASSWORD = @"^(?=.*[A-Z])(?=.*[0-9])[A-Za-z0-9]{8,}$";      //Positive look - (?=.*[A-Z])  .*-means we dont care about the precision where we are finding the character    
             Regex rg = new Regex(PASSWORD);
             var result = rg.IsMatch(password);
             if (result)
