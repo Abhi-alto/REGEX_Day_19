@@ -1,8 +1,8 @@
 ﻿using RegeX;
 Console.WriteLine("Welcome to the Regex class");
-Console.WriteLine("Enter your password");
-string password=Console.ReadLine();
+Console.WriteLine("Enter your email");
+string Email=Console.ReadLine();
 UserRegistration details = new UserRegistration();
-details.pass(password); 
+details.email(Email); 
 
 
